@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="menuStyle.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.5.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBshY0ECAR3WMy4g0AtgObFVqwVzVw_vLc",
+            authDomain: "goldenmenu-d5970.firebaseapp.com",
+            databaseURL: "https://goldenmenu-d5970.firebaseio.com",
+            projectId: "goldenmenu-d5970",
+            storageBucket: "goldenmenu-d5970.appspot.com",
+            messagingSenderId: "804536175480",
+            appId: "1:804536175480:web:60413116d583c5f001168d",
+            measurementId: "G-FJR3DB1RER"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="menuStyle.css">
+
+</head>
+<body>
+<h1 class="chapter">Menu à 25 €</h1>
+<h3>Entrée / Plat / Dessert</h3>
+<p class="mentionModif">21 € en formule entrée/plat ou 20 € plat/dessert</p>
+<p class="mentionModif"><strong>Les formules à 21 € et à 20 € ne sont pas servies le samedi soir et jours fériés</strong></p>
+
+
+<p id="entree1">aaa</p>
+<p class ="prix" id="Prixentree_25_1">aaa</p>
+<p id="Eou12" class="ou"> ou </p>
+<p id="entree2">aaa</p>
+<p class ="prix" id="Prixentree_25_2">aaa</p>
+<p id="Eou23"class="ou"> ou </p>
+<p id="entree3">aaa</p>
+<p class ="prix" id="Prixentree_25_3">aaa</p>
+
+<div class="separateur"><hr></div>
+
+<p id="plat1">aaa</p>
+<p class ="prix" id="Prixplat_25_1">aaa</p>
+<p id="Pou12" class="ou"> ou </p>
+<p id="plat2">aaa</p>
+<p class ="prix" id="Prixplat_25_2">aaa</p>
+<p id="Pou23"class="ou"> ou </p>
+<p id="plat3">aaa</p>
+<p class ="prix" id="Prixplat_25_3">aaa</p>
+
+<div class="separateur"><hr></div>
+
+<p id="dessert1">aaa</p>
+<p class ="prix" id="Prixdessert_25_1">aaa</p>
+<p id="Dou12" class="ou"> ou </p>
+<p id="dessert2">aaa</p>
+<p class ="prix" id="Prixdessert_25_2">aaa</p>
+<p id="Dou23"class="ou"> ou </p>
+<p id="dessert3">aaa</p>
+<p class ="prix" id="Prixdessert_25_3">aaa</p>
+<p id="Dou34" class="ou"> ou </p>
+<p id="dessert4">aaa</p>
+<p class ="prix" id="Prixdessert_25_4">aaa</p>
+<p id="Dou45"class="ou"> ou </p>
+<p id="dessert5">aaa</p>
+<p class ="prix" id="Prixdessert_25_5">aaa</p>
+
+<div class="separateur"><hr></div>
+
+<p class="supplement"><strong><em>5,00 euros</em> </strong>supplément avec fromage plateau</p>
+<p class="supplement"><strong><em>4,00 euros</em> </strong>supplément avec fromage blanc ou chèvre frais</p>
+<p class ="mention">Prix nets en euros – TVA à 10,00 % incluse – Service compris</p>
+
+
+
+<h1 class="chapter">Menu à 34 €</h1>
+
+<p id="miseEnBouche">Mise en bouche</p>
+
+<div class="separateur"><hr></div>
+
+<p id="33entree1">aaa</p>
+<p class ="prix" id="Prixentree_33_1">aaa</p>
+<p id="33Eou12" class="ou"> ou </p>
+<p id="33entree2">aaa</p>
+<p class ="prix" id="Prixentree_33_2">aaa</p>
+<p id="33Eou23"class="ou"> ou </p>
+<p id="33entree3">aaa</p>
+<p class ="prix" id="Prixentree_33_3">aaa</p>
+
+<div class="separateur"><hr></div>
+
+<p id="33plat1">aaa</p>
+<p class ="prix" id="Prixplat_33_1">aaa</p>
+<p id="33Pou12" class="ou"> ou </p>
+<p id="33plat2">aaa</p>
+<p class ="prix" id="Prixplat_33_2">aaa</p>
+<p id="33Pou23"class="ou"> ou </p>
+<p id="33plat3">aaa</p>
+<p class ="prix" id="Prixplat_33_3">aaa</p>
+
+<div class="separateur"><hr></div>
+
+<p id="33dessert1">Dessert au choix</p>
+<p class ="prix" id="Prixdessert_33_1">(8,00 euros)</p>
+<div class="separateur"><hr></div>
+
+<p class="supplement"><strong><em>5,00 euros </em></strong>supplément avec fromage plateau</p>
+<p class="supplement"><strong><em>4,00 euros</em></strong> supplément avec fromage blanc ou chèvre frais</p>
+<br><br>
+<h2>Nos formules N7</h2>
+
+<p id="formule1H">aaa</p>
+<p class ="prix" id="prixFormule1H">aaa</p>
+<p id="Fou12H" class="ou"> ou </p>
+<p id="formule2H">aaa</p>
+<p class ="prix" id="prixFormule2H">aaa</p>
+<p id="Fou23H" class="ou"> ou </p>
+<p id="formule3H">aaa</p>
+<p class ="prix" id="prixFormule3H">aaa</p>
+<p id="Fou34H" class="ou"> ou </p>
+<p id="formule4H">aaa</p>
+<p class ="prix" id="prixFormule4H">aaa</p>
+<p id ="WES" class="mentionModif formulesModif">(Les formules ci-dessus ne sont pas servies le soir, le samedi et les jours fériés)</p>
+
+<p id="formule1B">aaa</p>
+<p class ="prix" id="prixFormule1B">aaa</p>
+<p id="Fou12B" class="ou"> ou </p>
+<p id="formule2B">aaa</p>
+<p class ="prix" id="prixFormule2B">aaa</p>
+<p id="Fou23B" class="ou"> ou </p>
+<p id="formule3B">aaa</p>
+<p class ="prix" id="prixFormule3B">aaa</p>
+<p id="Fou34B" class="ou"> ou </p>
+<p id="formule4B">aaa</p>
+<p class ="prix" id="prixFormule4B">aaa</p>
+
+
+<div class="separateur"><hr></div>
+
+<p class ="mention">Prix nets en euros – TVA à 10,00 % incluse – Service compris</p>
+
+<script src="../js/menuPapierVitrine.js"></script>
+</body>
+</html>
+</html>

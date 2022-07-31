@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Tags Input</title>
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+
+  <link rel="stylesheet" href="../jquerybootsrap.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.5.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBshY0ECAR3WMy4g0AtgObFVqwVzVw_vLc",
+      authDomain: "goldenmenu-d5970.firebaseapp.com",
+      databaseURL: "https://goldenmenu-d5970.firebaseio.com",
+      projectId: "goldenmenu-d5970",
+      storageBucket: "goldenmenu-d5970.appspot.com",
+      messagingSenderId: "804536175480",
+      appId: "1:804536175480:web:60413116d583c5f001168d",
+      measurementId: "G-FJR3DB1RER"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+
+
+</head>
+<body>
+
+        <form>
+          <legend>Ajouter un vin</legend>
+
+          <!-- Text input-->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="nomVin">Nom du vin </label>
+              <input id="nomVin" name="nomVin" type="text" placeholder="Nom" class="form-control input-md"  required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="millesimeVin">Millésime</label>
+              <input id="millesimeVin" name="millesimeVin" type="text" placeholder="" class="form-control input-md" required>
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="nomVigneron">Nom du vigneron</label>
+              <input id="nomVigneron" name="nomVigneron" type="text" placeholder="Vigneron" class="form-control input-md" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="typeVin">Type</label>
+              <select id="typeVin" name="typeVin" class="form-control">
+                <option value="1">Blanc</option>
+                <option value="2">Rouge</option>
+                <option value="3">Rosé</option>
+                <option value="4">Champagne</option>
+                <option value="5">Crémant</option>
+                <option value="6">Pétillant</option>
+                <option value="7">Apéritif Vin Verre</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Select Multiple -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dimensionMultiple">Dimension</label>
+              <select id="dimensionMultiple" name="dimensionMultiple" class="form-control" multiple="multiple">
+                <option value="75">Bouteille</option>
+                <option value="37">Demi</option>
+                <option value="1">Verre</option>
+                <option value="45">Carafe</option>
+                <option value="150">Magnum</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="textNewPrixCarte">Prix du vin à la carte</label>
+              <input id="textNewPrixCarte" name="textNewPrixCarte" placeholder="Prix bouteille : Attention à bien mettre un . pas une , " type="text" class="form-control hidden" required="required">
+              <input id="textNewPrixVerre" name="textNewPrixVerre" type="text" placeholder="Prix du verre : Attention à bien mettre un . pas une ," class="form-control input-md hidden" required="">
+              <input id="textNewPrixCarafe" name="textNewPrixCarafe" type="text" placeholder="Prix de la carafe : Attention à bien mettre un . pas une ," class="form-control input-md hidden" required="">
+              <input id="textNewPrixDemi" name="textNewPrixDemi" type="text" placeholder="Prix de la demi bouteille : Attention à bien mettre un . pas une ," class="form-control input-md hidden" required="">
+              <input id="textNewPrixMagnum" name="textNewPrixMagnum" type="text" placeholder="Prix du magnum : Attention à bien mettre un . pas une ," class="form-control input-md hidden" required="">
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Appellation</label>
+              <div class="radio">
+                <label for="appellationRadios-0">
+                  <input type="radio" name="appellationRadios" id="appellationRadios-0" value="1" checked="checked">
+                  AOC/AOP
+                </label>
+                <input id="nomAOC" name="nomVin" type="text" placeholder="Nom" class="form-control input-md" required="">
+              </div>
+              <div class="radio">
+                <label for="appellationRadios-1">
+                  <input type="radio" name="appellationRadios" id="appellationRadios-1" value="2">
+                  IGP
+                </label>
+                <input id="nomIGP" name="nomVin" type="text" placeholder="Nom" class="form-control input-md" required="">
+              </div>
+              <!--<div class="radio">
+                <label for="appellationRadios-2">
+                  <input type="radio" name="appellationRadios" id="appellationRadios-2" value="3">
+                  Vin de France
+                </label>
+              </div>
+              <div class="radio">
+                <label for="appellationRadios-3">
+                  <input type="radio" name="appellationRadios" id="appellationRadios-3" value="4">
+                  Vin de Pays
+                </label>
+              </div>-->
+              <div class="radio">
+                <label for="appellationRadios-4">
+                  <input type="radio" name="appellationRadios" id="appellationRadios-4" value="5">
+                  Aucune
+                </label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Le vin est temporairement indisponible ?</label>
+                <div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="radioNewDispo" id="radioNewDispo_0" type="radio" class="custom-control-input" value="true" required="required" checked>
+                    <label for="radioNewDispo_0" class="custom-control-label">Non</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input name="radioNewDispo" id="radioNewDispo_1" type="radio" class="custom-control-input" value="false" required="required">
+                    <label for="radioNewDispo_1" class="custom-control-label">Oui</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row -align-center">
+              <button id="confirm-add" name="confirm-add" type="submit" class="btn btn-success">Ajouter</button>
+
+              <button id="confirm-and-wipe-add" name="confirm-add" type="submit" class="btn btn-danger">Ajouter (et effacer les champs)</button>
+            </div>
+          </div>
+        </form>
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="dist/bootstrap-tagsinput.min.js"></script>
+<script src="dist/bootstrap-tagsinput-angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
+<script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+<script src="../js/vins.js"></script>
+</body>
+</html>
+

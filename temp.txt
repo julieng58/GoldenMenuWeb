@@ -1,0 +1,92 @@
+02&01&Comté Tolosan\\ \hline
+02&02&Landes\\ \hline
+03&01&Comtés Rhodaniens\\ \hline
+03&02&Saône-et-Loire\\ \hline
+04&01&Atlantique\\ \hline
+04&02&Périgord\\ \hline
+05&01&Coteaux de l'Auxois\\ \hline
+05&02&Coteaux de Tannay\\ \hline
+05&03&Sainte-Marie-la-Blanche\\ \hline
+05&04&Saône-et-Loire\\ \hline
+05&05&Yonne\\ \hline
+06&01&Coteaux de Coiffy\\ \hline
+06&02&Haute-Marne\\ \hline
+07&01&Atlantique\\ \hline
+07&02&Charentais\\ \hline
+08&01&Franche-Comté\\ \hline
+09&01&Ariège\\ \hline
+09&02&Aude\\ \hline
+09&03&Cévennes\\ \hline
+09&04&Cité de Carcassonne\\ \hline
+09&05&Côte Vermeille\\ \hline
+09&06&Coteaux d'Ensérune\\ \hline
+09&07&Coteaux de Narbonne\\ \hline
+09&08&Coteaux de Peyriac\\ \hline
+09&09&Coteaux du Libron\\ \hline
+09&10&Coteaux du Pont du Gard\\ \hline
+09&11&Côtes Catalanes\\ \hline
+09&12&Côtes de Thau\\ \hline
+09&13&Côtes de Thongue\\ \hline
+09&14&Côtes du Brian\\ \hline
+09&15&Duché d'Uzès\\ \hline
+09&16&Gard\\ \hline
+09&17&Haute Vallée de l'Aude\\ \hline
+09&18&Haute Vallée de l'Orb\\ \hline
+09&19&Le Pays Cathare\\ \hline
+09&20&Pays d'Hérault\\ \hline
+09&21&Pays d'Oc\\ \hline
+09&22&Sable de Camargue\\ \hline
+09&23&Saint-Guilhem-le-Désert\\ \hline
+09&24&Vallée du Paradis\\ \hline
+09&25&Vallée du Torgan\\ \hline
+09&26&Vicomté d'Aumelas\\ \hline
+10&01&Calvados\\ \hline
+10&02&Comtés Rhodaniens\\ \hline
+10&03&Coteaux du Cher et de l'Arnon\\ \hline
+10&04&Côtes de la Charité\\ \hline
+10&05&Haute-Vienne\\ \hline
+10&06&Puy-de-Dôme\\ \hline
+10&07&Urfé\\ \hline
+10&08&Val de Loire\\ \hline
+11&01&Côtes de Meuse\\ \hline
+12&01&Alpes-de-Haute-Provence\\ \hline
+12&02&Alpes-Maritimes\\ \hline
+12&03&Alpilles\\ \hline
+12&04&Bouches-du-Rhone\\ \hline
+12&05&Hautes-Alpes\\ \hline
+12&06&Ile de Beauté\\ \hline
+12&07&Maures\\ \hline
+12&08&Méditerranée\\ \hline
+12&09&Mont Caume\\ \hline
+12&10&Var\\ \hline
+13&01&Ardèche\\ \hline
+13&02&Bouches-du-Rhone\\ \hline
+13&03&Cévennes\\ \hline
+13&04&Collines Rhodaniennes\\ \hline
+13&05&Comtés Rhodaniens\\ \hline
+13&06&Coteaux des Baronnies\\ \hline
+13&07&Coteaux du Pont du Gard\\ \hline
+13&08&Drôme\\ \hline
+13&09&Duché d'Uzès\\ \hline
+13&10&Gard\\ \hline
+13&11&Méditerranée\\ \hline
+13&12&Sable de Camargue\\ \hline
+13&13&Vaucluse\\ \hline
+14&01&Comtés Rhodaniens\\ \hline
+14&02&Coteaux de l'Ain\\ \hline
+14&03&Isère\\ \hline
+14&04&Vin des Allobroges\\ \hline
+15&01&Agenais\\ \hline
+15&02&Ariège\\ \hline
+15&03&Atlantique\\ \hline
+15&04&Aveyron\\ \hline
+15&05&Comté Tolosan\\ \hline
+15&06&Coteaux de Glanes\\ \hline
+15&07&Côtes de Gascogne\\ \hline
+15&08&Côtes du Lot\\ \hline
+15&09&Côtes du Tarn\\ \hline
+15&10&Gers\\ \hline
+15&11&Lavilledieu\\ \hline
+15&12&Périgord\\ \hline
+15&13&Thézac-Perricard\\ \hline
+15&14&Vins de la Corrèze\\ \hline

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Golden Menu</title>
+    <link rel="icon" type="image/jpg" href="../img/iconesite.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.5.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBshY0ECAR3WMy4g0AtgObFVqwVzVw_vLc",
+            authDomain: "goldenmenu-d5970.firebaseapp.com",
+            databaseURL: "https://goldenmenu-d5970.firebaseio.com",
+            projectId: "goldenmenu-d5970",
+            storageBucket: "goldenmenu-d5970.appspot.com",
+            messagingSenderId: "804536175480",
+            appId: "1:804536175480:web:60413116d583c5f001168d",
+            measurementId: "G-FJR3DB1RER"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src ="../js/formules.js"></script>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/auth.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Golden Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" id="navbarDropdownAssiettes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Les assiettes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./entrees.html">Les entrées</a>
+                    <a class="dropdown-item" href="./plats.html">Les plats</a>
+                    <a class="dropdown-item" href="./desserts.html">Les desserts</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item active" href="./formules.html">Les formules</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../covid/entreesCOVID.html">Entrees COVID</a>
+                    <a class="dropdown-item" href="../covid/platsCOVID.html">Plats COVID</a>
+                    <a class="dropdown-item" href="../covid/dessertsCOVID.html">Desserts COVID</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownCompos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Les compositions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../compositions/menu25.html">Menu à 25€</a>
+                    <a class="dropdown-item" href="../compositions/menu32.html">Menu à 33€</a>
+                    <a class="dropdown-item" href="../compositions/nosformules.html">Les formules N7</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../compositions/carte.html">La carte</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../compositions/formulesMidiCOVID.html">Compo COVID</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownCave" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Ajouter à la cave
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../cave/vins.html">Les Vins</a>
+                    <a class="dropdown-item " href="../cave/bieres.html">Les bières</a>
+                    <a class="dropdown-item" href="../cave/bar.html">Spiritueux</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownCaveListing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dans la cave
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../listingcave/vins.html">Les Vins</a>
+                    <a class="dropdown-item " href="../listingcave/bieres.html">Les bières</a>
+                    <a class="dropdown-item" href="../listingcave/bar.html">Spiritueux</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../generated/homeGenerated.html">Génération menus</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../messagetemp/messagetemp.html">Messages temporaires</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Ajouter de nouvelles formules
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <form>
+                    <legend>Ajouter</legend>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="textNewNomPlat">Nom du plat</label>
+                            <input id="textNewNomPlat" name="textNewNomPlat" type="text" required="required" class="form-control">
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="textNewDessert">Nom du dessert</label>
+                            <input id="textNewDessert" name="textNewDessert" type="text" required="required" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="textNewPrixFormule">Prix de la formule</label>
+                            <input id="textNewPrixFormule" name="textNewPrixFormule" placeholder="Attention à bien mettre un . pas une , " type="text" class="form-control" required="required">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="textNewPrixCarte">Prix du plat à la carte</label>
+                            <input id="textNewPrixCarte" name="textNewPrixCarte" placeholder="Attention à bien mettre un . pas une , " type="text" class="form-control" required="required">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>La formule est elle uniquement disponible le midi en semaine</label>
+                            <div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewWES" id="radioNewWES_0" type="radio" class="custom-control-input" value="false" required="required">
+                                    <label for="radioNewWES_0" class="custom-control-label">Oui</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewWES" id="radioNewWES_1" type="radio" class="custom-control-input" value="true" required="required" checked>
+                                    <label for="radioNewWES_1" class="custom-control-label">Non</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>La formule est elle vegan ?</label>
+                            <div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewVegan" id="radioNewVegan_0" type="radio" class="custom-control-input" value="true" required="required">
+                                    <label for="radioNewVegan_0" class="custom-control-label">Oui</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewVegan" id="radioNewVegan_1" type="radio" class="custom-control-input" value="false" required="required" checked>
+                                    <label for="radioNewVegan_1" class="custom-control-label">Non</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Le plat est temporairement indisponible ?</label>
+                            <div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewDispo" id="radioNewDispo_0" type="radio" class="custom-control-input" value="true" required="required" checked>
+                                    <label for="radioNewDispo_0" class="custom-control-label">Non</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewDispo" id="radioNewDispo_1" type="radio" class="custom-control-input" value="false" required="required">
+                                    <label for="radioNewDispo_1" class="custom-control-label">Oui</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>La formule est sans gluten ?</label>
+                            <div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewGluten" id="radioNewGluten_0" type="radio" class="custom-control-input" value="true" required="required">
+                                    <label for="radioNewGluten_0" class="custom-control-label">Oui</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input name="radioNewGluten" id="radioNewGluten_1" type="radio" class="custom-control-input" value="false" required="required" checked>
+                                    <label for="radioNewGluten_1" class="custom-control-label">Non</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Confirm Add Button  -->
+                    <div class="form-group">
+                        <div class="col-md-8">
+                            <button id="confirm-add" name="confirm-add" type="button" class="btn btn-success">Ajouter</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Modifier / Lister les formules
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                <table id="formule-table" class="student-list table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Nom du plat</th>
+                        <th>Nom du dessert</th>
+                        <th>Prix formule</th>
+                        <th>Prix dessert</th>
+                        <th>Disponible ?</th>
+                        <th>Uniquement le midi en semaine?</th>
+                        <th>Vegan ?</th>
+                        <th>Sans gluten ?</th>
+                        <th>Edition</th>
+                    </tr>
+                    </thead>
+                    <tbody id="contenuFormules">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal-body">
+
+</div>
+
+<div class="container-fluid">
+
+
+</div>
+
+<!--======== Edit Modal ===========-->
+<!-- line modal -->
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form>
+                    <legend>Modifier une formule</legend>
+                    <div class="form-group">
+                        <label for="textNomPlat">Nom du plat</label>
+                        <input id="textNomPlat" name="textNomPlat" type="text" required="required" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="textDessert">Nom du dessert</label>
+                        <input id="textDessert" name="textDessert" type="text" required="required" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="textPrixFormule">Prix de la formule</label>
+                        <input id="textPrixFormule" name="textPrixFormule" placeholder="Attention à bien mettre un . pas une , " type="text" class="form-control" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="textPrixCarte">Prix du plat à la carte</label>
+                        <input id="textPrixCarte" name="textPrixCarte" placeholder="Attention à bien mettre un . pas une , " type="text" class="form-control" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>La formule est elle uniquement disponible le midi en semaine</label>
+                        <div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioWES" id="radioWES_0" type="radio" class="custom-control-input" value="false" required="required">
+                                <label for="radioWES_0" class="custom-control-label">Oui</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioWES" id="radioWES_1" type="radio" class="custom-control-input" value="true" required="required">
+                                <label for="radioWES_1" class="custom-control-label">Non</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>La formule est elle vegan ?</label>
+                        <div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioVegan" id="radioVegan_0" type="radio" class="custom-control-input" value="true" required="required">
+                                <label for="radioVegan_0" class="custom-control-label">Oui</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioVegan" id="radioVegan_1" type="radio" class="custom-control-input" value="false" required="required">
+                                <label for="radioVegan_1" class="custom-control-label">Non</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>La formule est sans gluten ?</label>
+                        <div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioGluten" id="radioGluten_0" type="radio" class="custom-control-input" value="true" required="required">
+                                <label for="radioGluten_0" class="custom-control-label">Oui</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioGluten" id="radioGluten_1" type="radio" class="custom-control-input" value="false" required="required">
+                                <label for="radioGluten_1" class="custom-control-label">Non</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Le plat est temporairement indisponible ?</label>
+                        <div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioDispo" id="radioDispo_0" type="radio" class="custom-control-input" value="true" required="required">
+                                <label for="radioDispo_0" class="custom-control-label">Non</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="radioDispo" id="radioDispo_1" type="radio" class="custom-control-input" value="false" required="required">
+                                <label for="radioDispo_1" class="custom-control-label">Oui</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="formule-id" name="fid" value="" />
+
+                    <!-- Confirm Edit Button  -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="confirm-edit">Confirm Edit</label>
+                        <div class="col-md-8">
+                            <button id="confirm-edit" name="confirm-edit" type="button" class="btn btn-success">Modifier</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Tags Input</title>
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="dist/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/github.css">
+    <link rel="stylesheet" href="assets/app.css">
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.5.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBshY0ECAR3WMy4g0AtgObFVqwVzVw_vLc",
+        authDomain: "goldenmenu-d5970.firebaseapp.com",
+        databaseURL: "https://goldenmenu-d5970.firebaseio.com",
+        projectId: "goldenmenu-d5970",
+        storageBucket: "goldenmenu-d5970.appspot.com",
+        messagingSenderId: "804536175480",
+        appId: "1:804536175480:web:60413116d583c5f001168d",
+        measurementId: "G-FJR3DB1RER"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+  </head>
+  <body>
+
+  <div class="container">
+        <div class="example example_tagclass">
+          <h1>Formule du Midi (COVID)</h1>
+          <h3>Indiquez quelles sont les entrées disponibles : </h3>
+
+          <div class="bs-example">
+            <input id="entrees" type="text" />
+          </div>
+          <h3>Indiquez quels sont les plats : </h3>
+          <div class="bs-example">
+            <input id="plat" type="text" />
+          </div>
+
+          <h3>Indiquez quels sont les desserts : </h3>
+          <div class="bs-example">
+            <input id="dessert" type="text" />
+          </div>
+
+        </div>
+  </div>
+
+  <div class="container">
+      <h1>Formule du SOIR (COVID)</h1>
+      <div class="bs-example">
+        <label for="prixPteAss">Prix de l'assiette salée</label>
+        <input id="prixPteAss" type="text" />
+      </div>
+      <div class="bs-example" hidden>
+        <label for="prixGrdAss">Prix de la grande assiette</label>
+        <input id="prixGrdAss" type="text" />
+      </div>
+    <div class="bs-example">
+      <label for="prixDesAss">Prix de l'assiette sucrée</label>
+      <input id="prixDesAss" type="text" />
+    </div>
+    <div class="bs-example" hidden>
+      <label for="prixForPte">Prix de la petite formule</label>
+      <input id="prixForPte" type="text" />
+    </div>
+    <div class="bs-example" hidden>
+      <label for="prixForGrd">Prix de la grande formule</label>
+      <input id="prixForGrd" type="text" />
+    </div>
+    <input id="ref" type="text" hidden/>
+    <button onclick="refreshPrice()">Mettre à jour le prix des assiettes de Tapas</button>
+
+  </div>
+
+
+
+
+
+  <script src="../js/compostions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="dist/bootstrap-tagsinput.min.js"></script>
+    <script src="dist/bootstrap-tagsinput-angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>>
+    <script src="assets/app.js"></script>
+    <script src="assets/app_FMC.js"></script>
+  </body>
+</html>
+

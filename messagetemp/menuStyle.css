@@ -1,0 +1,117 @@
+@page {
+    size: A4;
+    margin: 2cm;
+}
+
+@page :left {
+    margin-left: 1cm;
+}
+
+@page :right {
+    margin-left: 1cm;
+}
+
+@page:right{
+    @bottom-left {
+        margin: 10pt 0 30pt 0;
+        border-top: .25pt solid #666;
+        font-size: 9pt;
+        color: #333;
+    }
+}
+
+
+p,h1{
+    color:#8c684a;
+}
+h1,h3 {
+    font-size: 40px;
+    page-break-before: always;
+    text-align: center;
+    font-family: Times, "Times New Roman", Georgia, serif;'gloss' !important;
+}
+
+h2{
+    color:#8c684a;
+    font-size: 40px;
+    text-align: center;
+    font-family: Times, "Times New Roman", Georgia, serif;'gloss' !important;
+}
+
+h3{
+    page-break-before: avoid;
+    padding-top: 0cm;
+    padding-bottom: 0cm;
+    text-transform:uppercase;
+    font-size: 20px;
+    margin-bottom: 0cm;
+}
+
+h3 + .mentionModif{
+    padding-top: 0cm;
+}
+
+p{
+    text-align: center;
+    font-family: Times, "Times New Roman", Georgia, serif;'gloss' !important;
+    font-size: 22px;
+}
+
+p + .prix{
+    margin-top: -1em;
+}
+
+.mentionModif{
+    font-size: 18px;
+}
+
+.mentionModif + .mentionModif{
+    padding-top: 0cm;
+    margin-top:  0cm;
+}
+.mentionModif strong{
+    color: #c66f7e;
+    padding-top: 0;
+}
+
+
+.mentionModif strong + p{
+    padding-top: 2cm;
+
+}
+div hr {
+    border-top: 1px solid #ffc100;
+    color: #3e2723;
+    width: 30%;
+}
+h1 + #miseEnBouche {
+    padding-top: 1.5cm;
+}
+.ou{
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.supplement strong{
+    color: #c66f7e;
+}
+
+.prix {
+    color: #c66f7e;
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+}
+
+.separateur{
+    padding-top: 0.25cm;
+    padding-bottom: 0.5cm;
+}
+
+.formulesModif{
+    font-size: 25px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: #c66f7e;
+    font-weight: bold;
+
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Golden Menu</title>
+    <link rel="icon" type="image/jpg" href="../img/iconesite.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBshY0ECAR3WMy4g0AtgObFVqwVzVw_vLc",
+            authDomain: "goldenmenu-d5970.firebaseapp.com",
+            databaseURL: "https://goldenmenu-d5970.firebaseio.com",
+            projectId: "goldenmenu-d5970",
+            storageBucket: "goldenmenu-d5970.appspot.com",
+            messagingSenderId: "804536175480",
+            appId: "1:804536175480:web:60413116d583c5f001168d",
+            measurementId: "G-FJR3DB1RER"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/auth.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">Golden Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownAssiettes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Les assiettes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../assiettes/entrees.html">Les entrées</a>
+                    <a class="dropdown-item" href="../assiettes/plats.html">Les plats</a>
+                    <a class="dropdown-item" href="../assiettes/desserts.html">Les desserts</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../assiettes/formules.html">Les formules</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownCompos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Les compositions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item " href="../compositions/menu25.html">Menu à 25€</a>
+                    <a class="dropdown-item" href="../compositions/menu32.html">Menu à 33€</a>
+                    <a class="dropdown-item" href="../compositions/nosformules.html">Les formules N7</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../compositions/carte.html">La carte</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" id="navbarDropdownCave" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Ajouter à la cave
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item active" href="./vins.html">Les Vins</a>
+                    <a class="dropdown-item" href="./bieres.html">Les bières</a>
+                    <a class="dropdown-item" href="./bar.html">Spiritueux</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownCaveListing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dans la cave
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../listingcave/vins.html">Les Vins</a>
+                    <a class="dropdown-item " href="../listingcave/bieres.html">Les bières</a>
+                    <a class="dropdown-item" href="../listingcave/bar.html">Spiritueux</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../generated/homeGenerated.html">Génération menus</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../messagetemp/messagetemp.html">Messages temporaires</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="../embeded/vinsEmbeded.html" allowfullscreen></iframe>
+</div>
+
+
+
+
+<script src="../js/vins.js"></script>
+</body>
+</html>

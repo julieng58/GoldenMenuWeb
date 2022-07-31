@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="menuStyle.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.5.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBshY0ECAR3WMy4g0AtgObFVqwVzVw_vLc",
+            authDomain: "goldenmenu-d5970.firebaseapp.com",
+            databaseURL: "https://goldenmenu-d5970.firebaseio.com",
+            projectId: "goldenmenu-d5970",
+            storageBucket: "goldenmenu-d5970.appspot.com",
+            messagingSenderId: "804536175480",
+            appId: "1:804536175480:web:60413116d583c5f001168d",
+            measurementId: "G-FJR3DB1RER"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="menuStyle.css">
+
+</head>
+<body>
+<h1 class="chapter">Nos propositions pour le midi</h1>
+<h3>À la carte</h3>
+<h3>En formule plat-dessert</h3>
+<h3>En menu entrée-plat-dessert</h3>
+
+<p class="mentionModif"></p>
+
+
+<p id="entree1">aaa</p>
+<p class ="prix" id="Prixentree_25_1">aaa</p>
+<p id="Eou12" class="ou"> ou </p>
+<p id="entree2">aaa</p>
+<p class ="prix" id="Prixentree_25_2">aaa</p>
+<p id="Eou23"class="ou"> ou </p>
+<p id="entree3">aaa</p>
+<p class ="prix" id="Prixentree_25_3">aaa</p>
+<p id="Eou34" class="ou"> ou </p>
+<p id="entree4">aaa</p>
+<p class ="prix" id="Prixentree_25_4">aaa</p>
+<p id="Eou45"class="ou"> ou </p>
+<p id="entree5">aaa</p>
+<p class ="prix" id="Prixentree_25_5">aaa</p>
+<p id="Eou56"class="ou"> ou </p>
+<p id="entree6">aaa</p>
+<p class ="prix" id="Prixentree_25_6">aaa</p>
+<p id="Eou67"class="ou"> ou </p>
+<p id="entree7">aaa</p>
+<p class ="prix" id="Prixentree_25_7">aaa</p>
+<p id="Eou78"class="ou"> ou </p>
+<p id="entree8">aaa</p>
+<p class ="prix" id="Prixentree_25_8">aaa</p>
+
+<div class="separateur"><hr></div>
+
+
+<table id="plat-table" class="table table-borderless">
+    <thead>
+    <tr>
+        <th></th>
+        <th>Prix à la carte</th>
+        <th>Prix en formule plat-dessert</th>
+        <th>Prix en menu complet</th>
+    </thead>
+    <tbody id="contenuPlats">
+    </tbody>
+</table>
+
+<div class="separateur"><hr></div>
+
+<p id="dessert1">aaa</p>
+<p class ="prix" id="Prixdessert_25_1">aaa</p>
+<p id="Dou12" class="ou"> ou </p>
+<p id="dessert2">aaa</p>
+<p class ="prix" id="Prixdessert_25_2">aaa</p>
+<p id="Dou23"class="ou"> ou </p>
+<p id="dessert3">aaa</p>
+<p class ="prix" id="Prixdessert_25_3">aaa</p>
+<p id="Dou34" class="ou"> ou </p>
+<p id="dessert4">aaa</p>
+<p class ="prix" id="Prixdessert_25_4">aaa</p>
+<p id="Dou45"class="ou"> ou </p>
+<p id="dessert5">aaa</p>
+<p class ="prix" id="Prixdessert_25_5">aaa</p>
+
+<div class="separateur"><hr></div>
+
+<p class ="mention">Prix nets en euros – TVA à 10,00 % incluse – Service compris</p>
+
+<script src="../js/menuPapierFormule.js"></script>
+</body>
+</html>
+</html>
