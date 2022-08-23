@@ -8,8 +8,8 @@ $(document).ready(function() {
     function onLoadFunctions() {
         dispose25();
         dispose33();
-        disposeFormH();
-        disposeFormB();
+        //disposeFormH();
+        //disposeFormB();
     }
 
 
@@ -482,7 +482,7 @@ $(document).ready(function() {
 
     }
 
-    function disposeFormH(){
+    /*function disposeFormH(){
         database.collection("Formule").where("aLaCarte","==",true).where("dispoWes","==",false).get().then((querySnapshot) => {
             var i =0;
             querySnapshot.forEach((doc) => {
@@ -698,7 +698,7 @@ $(document).ready(function() {
             }
         });
 
-    }
+    }*/
 
 
 

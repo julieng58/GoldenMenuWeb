@@ -10,7 +10,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
-
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -58,29 +57,35 @@
                     <a class="dropdown-item" href="../assiettes/desserts.html">Les desserts</a>
                     <div class="dropdown-divider" hidden="true"></div>
                     <a class="dropdown-item" href="../assiettes/formules.html" hidden="true">Les formules</a>
+                    <div class="dropdown-divider" hidden="true"></div>
+                    <a class="dropdown-item" href="../covid/entreesCOVID.html" hidden="true">Entrees COVID</a>
+                    <a class="dropdown-item" href="../covid/platsCOVID.html" hidden="true">Plats COVID</a>
+                    <a class="dropdown-item" href="../covid/dessertsCOVID.html" hidden="true">Desserts COVID</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownCompos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle active" id="navbarDropdownCompos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Les compositions
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item " href="../compositions/menu25.html">Menu à 26€</a>
-                    <a class="dropdown-item" href="../compositions/menu32.html">Menu à 33€</a>
-                    <a class="dropdown-item" href="../compositions/menuVegan.html">Menu Vegetarien</a>
-                    <a class="dropdown-item" href="../compositions/nosformules.html" hidden="true">Les formules N7</a>
+                    <a class="dropdown-item" href="./menu25.html">Menu à 26€</a>
+                    <a class="dropdown-item " href="./menu32.html">Menu à 33€</a>
+                    <a class="dropdown-item active" href="./menuVegan.html">Menu Vegetarien</a>
+                    <a class="dropdown-item" href="./nosformules.html" hidden="true">Les formules N7</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../compositions/carte.html">La carte</a>
+                    <a class="dropdown-item" href="./carte.html">La carte</a>
+                    <div class="dropdown-divider" hidden="true"></div>
+                    <a class="dropdown-item" href="../compositions/formulesMidiCOVID.html" hidden="true">Compo COVID</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" id="navbarDropdownCave" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownCave" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Ajouter à la cave
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="./vins.html">Les Vins</a>
-                    <a class="dropdown-item active" href="./bieres.html">Les bières</a>
-                    <a class="dropdown-item" href="./bar.html">Spiritueux</a>
+                    <a class="dropdown-item" href="../cave/vins.html">Les Vins</a>
+                    <a class="dropdown-item " href="../cave/bieres.html">Les bières</a>
+                    <a class="dropdown-item" href="../cave/bar.html">Spiritueux</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -103,12 +108,10 @@
     </div>
 </nav>
 
-
 <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="../embeded/barEmbeded.html" allowfullscreen></iframe>
+    <iframe class="embed-responsive-item" src="../embeded/menuVeganEmbeded.html" allowfullscreen></iframe>
 </div>
 
 
-<script src="../js/bar.js"></script>
 </body>
 </html>

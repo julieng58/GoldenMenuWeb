@@ -55,12 +55,12 @@
                     <a class="dropdown-item" href="../assiettes/entrees.html">Les entrées</a>
                     <a class="dropdown-item" href="../assiettes/plats.html">Les plats</a>
                     <a class="dropdown-item" href="../assiettes/desserts.html">Les desserts</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../assiettes/formules.html">Les formules</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../covid/entreesCOVID.html">Entrees COVID</a>
-                    <a class="dropdown-item" href="../covid/platsCOVID.html">Plats COVID</a>
-                    <a class="dropdown-item" href="../covid/dessertsCOVID.html">Desserts COVID</a>
+                    <div class="dropdown-divider" hidden="true"></div>
+                    <a class="dropdown-item" href="../assiettes/formules.html" hidden="true">Les formules</a>
+                    <div class="dropdown-divider " hidden="true"></div>
+                    <a class="dropdown-item" href="../covid/entreesCOVID.html" hidden="true">Entrees COVID</a>
+                    <a class="dropdown-item" href="../covid/platsCOVID.html" hidden="true">Plats COVID</a>
+                    <a class="dropdown-item" href="../covid/dessertsCOVID.html" hidden="true">Desserts COVID</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -68,13 +68,14 @@
                     Les compositions
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../compositions/menu25.html">Menu à 25€</a>
+                    <a class="dropdown-item" href="../compositions/menu25.html">Menu à 26€</a>
                     <a class="dropdown-item" href="../compositions/menu32.html">Menu à 33€</a>
-                    <a class="dropdown-item" href="../compositions/nosformules.html">Les formules N7</a>
+                    <a class="dropdown-item" href="../compositions/menuVegan.html">Menu Vegetarien</a>
+                    <a class="dropdown-item" href="../compositions/nosformules.html" hidden="true">Les formules N7</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="../compositions/carte.html">La carte</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../compositions/formulesMidiCOVID.html">Compo COVID</a>
+                    <div class="dropdown-divider" hidden="true"></div>
+                    <a class="dropdown-item" href="../compositions/formulesMidiCOVID.html" hidden="true">Compo COVID</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -108,24 +109,26 @@
 </nav>
 <div>
 
-<div class="d-flex justify-content-center"><button class="btn btn-success" onclick=" window.open('./menu.html','_blank')"> Menus avec prix</button>
-</div>
+    <div class="d-flex justify-content-center p-3"><button class="btn btn-success" onclick=" window.open('./menu.html','_blank')"> Menus avec prix</button>
+    </div>
 
-<div class="d-flex justify-content-center">
-    <button class="btn btn-success" onclick=" window.open('./menuSansPrix.html','_blank')"> Menus sans prix</button></div>
+    <div class="d-flex justify-content-center p-3">
+        <button class="btn btn-success" onclick=" window.open('./menuSansPrix.html','_blank')"> Menus sans prix</button>
+    </div>
+        <div class="d-flex justify-content-center p-3">
+            <button class="btn btn-success" onclick=" window.open('./menuVitrine.html','_blank')"> Menus vitrine</button>
+        </div>
 
-<div class="d-flex justify-content-center">
-    <button class="btn btn-success" onclick=" window.open('./menuVitrine.html','_blank')"> Menus vitrine</button></div>
-</div>
+        <div class="d-flex justify-content-center" hidden="true">
+            <button class="btn btn-success" onclick=" window.open('./menuFormule.html','_blank')" hidden="true"> Menus vitrine formule</button>
+        </div>
 
-<div class="d-flex justify-content-center">
-    <button class="btn btn-success" onclick=" window.open('./menuFormule.html','_blank')"> Menus vitrine formule</button></div>
-</div>
+        <div class="d-flex justify-content-center" hidden="true">
+            <button class="btn btn-success" onclick=" window.open('./menuTapas.html','_blank')" hidden="true"> Menus tapas</button>
+        </div>
+    </div>
 
-<div class="d-flex justify-content-center">
-    <button class="btn btn-success" onclick=" window.open('./menuTapas.html','_blank')"> Menus tapas</button></div>
-</div>
 
-<script src="../js/auth.js"></script>
+        <script src="../js/auth.js"></script>
 </body>
 </html>
