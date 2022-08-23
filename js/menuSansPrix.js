@@ -8,6 +8,7 @@ $(document).ready(function() {
     function onLoadFunctions() {
         dispose25();
         dispose33();
+        dispose22();
         //disposeFormH();
         //disposeFormB();
     }
@@ -394,6 +395,173 @@ $(document).ready(function() {
             }
         });
 
+    }
+
+    function dispose22() {
+        database.collection("Entree").where("aLaCarte", "==", 22).get().then((querySnapshot) => {
+            var i = 0;
+            querySnapshot.forEach((doc) => {
+                let nom = doc.data().nom;
+                switch (i) {
+                    case 0 :
+                        const entree1 = document.getElementById("22entree1");
+                        entree1.innerText = nom;
+                        break;
+                    case 1 :
+                        const entree2 = document.getElementById("22entree2");
+                        entree2.innerText = nom;
+                        break;
+                    case 2 :
+                        const entree3 = document.getElementById("22entree3");
+                        entree3.innerText = nom;
+                        break;
+                }
+                i++;
+            });
+            if (i < 3) {
+                const ou23 = document.getElementById("22Eou23");
+                const plat3 = document.getElementById("22entree3");
+                const ou12 = document.getElementById("22Eou12");
+                const plat2 = document.getElementById("22entree2");
+
+                switch (i) {
+                    case 2 :
+                        plat3.remove();
+                        ou23.remove();
+                        break;
+                    case 1 :
+                        plat3.remove();
+                        ou23.remove();
+                        plat2.remove();
+                        ou12.remove();
+                        break;
+                }
+            }
+        });
+
+        database.collection("Plat").where("aLaCarte", "==", 22).get().then((querySnapshot) => {
+            var i = 0;
+            querySnapshot.forEach((doc) => {
+                let nom = doc.data().nom;
+                switch (i) {
+                    case 0 :
+                        const plat1 = document.getElementById("22plat1");
+                        plat1.innerText = nom;
+                        break;
+                    case 1 :
+                        const plat2 = document.getElementById("22plat2");
+                        plat2.innerText = nom;
+                        break;
+                    case 2 :
+                        const plat3 = document.getElementById("22plat3");
+                        plat3.innerText = nom;
+                        break;
+                }
+                i++;
+            });
+            if (i < 3) {
+                const ou23 = document.getElementById("22Pou23");
+                const plat3 = document.getElementById("22plat3");
+                const ou12 = document.getElementById("22Pou12");
+                const plat2 = document.getElementById("22plat2");
+                switch (i) {
+                    case 2 :
+                        plat3.remove();
+                        ou23.remove();
+                        break;
+                    case 1 :
+                        plat3.remove();
+                        ou23.remove();
+                        plat2.remove();
+                        ou12.remove();
+                        break;
+                }
+            }
+        });
+
+        database.collection("Dessert").where("aLaCarte", "==", 1).where("vegan", "==", true).get().then((querySnapshot) => {
+            var i = 0;
+            querySnapshot.forEach((doc) => {
+                let nom = doc.data().nom;
+                console.log(nom)
+                switch (i) {
+                    case 0 :
+                        const dessert1 = document.getElementById("22dessert1");
+                        dessert1.innerText = nom;
+                        break;
+                    case 1 :
+                        const dessert2 = document.getElementById("22dessert2");
+                        dessert2.innerText = nom;
+                        break;
+                    case 2 :
+                        const dessert3 = document.getElementById("22dessert3");
+                        dessert3.innerText = nom;
+                        break;
+                    case 3 :
+                        const dessert4 = document.getElementById("22dessert4");
+                        dessert4.innerText = nom;
+                        break;
+                    case 4 :
+                        const dessert5 = document.getElementById("22dessert5");
+                        dessert5.innerText = nom;
+                        break;
+                }
+                i++;
+            });
+            if (i < 5) {
+                const ou45 = document.getElementById("22Dou45");
+                const ou34 = document.getElementById("22Dou34");
+                const ou23 = document.getElementById("22Dou23");
+                const ou12 = document.getElementById("22Dou12");
+                const dessert5 = document.getElementById("22dessert5");
+                const dessert4 = document.getElementById("22dessert4");
+                const dessert3 = document.getElementById("22dessert3");
+                const dessert2 = document.getElementById("22dessert2");
+                const dessert1 = document.getElementById("22dessert1");
+                switch (i) {
+                    case 4 :
+                        dessert5.remove();
+                        ou45.remove();
+                        break;
+                    case 3 :
+                        dessert5.remove();
+                        dessert4.remove();
+                        ou45.remove();
+                        ou34.remove();
+                        break;
+                    case 2 :
+                        dessert5.remove();
+                        dessert4.remove();
+                        dessert3.remove();
+                        ou45.remove();
+                        ou34.remove();
+                        ou23.remove();
+                        break;
+                    case 1 :
+                        dessert5.remove();
+                        dessert4.remove();
+                        dessert3.remove();
+                        dessert2.remove();
+                        ou45.remove();
+                        ou34.remove();
+                        ou23.remove();
+                        ou12.remove();
+                        break;
+                    case 0:
+                        dessert5.remove();
+                        dessert4.remove();
+                        dessert3.remove();
+                        dessert2.remove();
+                        dessert1.remove();
+                        ou45.remove();
+                        ou34.remove();
+                        ou23.remove();
+                        ou12.remove();
+                        break;
+
+                }
+            }
+        });
     }
 
 /*    function disposeFormH(){

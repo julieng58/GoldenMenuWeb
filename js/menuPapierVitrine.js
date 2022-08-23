@@ -8,6 +8,7 @@ $(document).ready(function() {
     function onLoadFunctions() {
         dispose25();
         dispose33();
+        dispose22();
         //disposeFormH();
         //disposeFormB();
     }
@@ -321,6 +322,114 @@ $(document).ready(function() {
 
     }
 
+    function dispose22(){
+        database.collection("Entree").where("aLaCarte","==",22).get().then((querySnapshot) => {
+            var i =0;
+            querySnapshot.forEach((doc) => {
+                let nom = doc.data().nom;
+                let prixCarte = doc.data().prixCarte;
+                switch (i) {
+                    case 0 :
+                        const entree1 = document.getElementById("22entree1");
+                        const prix1 = document.getElementById("Prixentree_22_1");
+                        entree1.innerText = nom;
+                        prix1.innerText = "(Prix à la carte : " + prixCarte + ",00 euros)";
+                        break;
+                    case 1 :
+                        const entree2 = document.getElementById("22entree2");
+                        const prix2 = document.getElementById("Prixentree_22_2");
+                        entree2.innerText = nom;
+                        prix2.innerText = "(Prix à la carte : " + prixCarte + ",00 euros)";
+                        break;
+                    case 2 :
+                        const entree3 = document.getElementById("22entree3");
+                        const prix3 = document.getElementById("Prixentree_22_3");
+                        entree3.innerText = nom;
+                        prix3.innerText = "(Prix à la carte : " + prixCarte + ",00 euros)";
+                        break;
+                }
+                i++;
+            });
+            if(i<3){
+                const ou23 = document.getElementById("22Eou23");
+                const plat3 = document.getElementById("22entree3");
+                const ou12 = document.getElementById("22Eou12");
+                const plat2 = document.getElementById("22entree2");
+                const prix3 = document.getElementById("Prixentree_22_3");
+                const prix2 = document.getElementById("Prixentree_22_2");
+
+                switch (i) {
+                    case 2 :
+                        prix3.remove();
+                        plat3.remove();
+                        ou23.remove();
+                        break;
+                    case 1 :
+                        plat3.remove();
+                        prix3.remove();
+                        prix2.remove();
+                        ou23.remove();
+                        plat2.remove();
+                        ou12.remove();
+                        break;
+                }
+            }
+        });
+
+        database.collection("Plat").where("aLaCarte","==",22).get().then((querySnapshot) => {
+            var i =0;
+            querySnapshot.forEach((doc) => {
+                let nom = doc.data().nom;
+                let prixCarte = doc.data().prixCarte;
+                switch (i) {
+                    case 0 :
+                        const plat1 = document.getElementById("22plat1");
+                        const prix1 = document.getElementById("Prixplat_22_1");
+                        plat1.innerText = nom;
+                        prix1.innerText = "(Prix à la carte : " + prixCarte + ",00 euros)";
+                        break;
+                    case 1 :
+                        const plat2 = document.getElementById("22plat2");
+                        const prix2 = document.getElementById("Prixplat_22_2");
+                        plat2.innerText = nom;
+                        prix2.innerText = "(Prix à la carte : " + prixCarte + ",00 euros)";
+                        break;
+                    case 2 :
+                        const plat3 = document.getElementById("22plat3");
+                        const prix3 = document.getElementById("Prixplat_22_3");
+                        plat3.innerText = nom;
+                        prix3.innerText = "(Prix à la carte : " + prixCarte + ",00 euros)";
+                        break;
+                }
+                i++;
+            });
+            if(i<3){
+                const ou23 = document.getElementById("22Pou23");
+                const plat3 = document.getElementById("22plat3");
+                const ou12 = document.getElementById("22Pou12");
+                const plat2 = document.getElementById("22plat2");
+                const prix3 = document.getElementById("Prixplat_22_3");
+                const prix2 = document.getElementById("Prixplat_22_2");
+                switch (i) {
+                    case 2 :
+                        prix3.remove();
+                        plat3.remove();
+                        ou23.remove();
+                        break;
+                    case 1 :
+                        prix3.remove();
+                        prix2.remove();
+                        plat3.remove();
+                        ou23.remove();
+                        plat2.remove();
+                        ou12.remove();
+                        break;
+                }
+            }
+        });
+
+    }
+    
 /*    function disposeFormH(){
         database.collection("Formule").where("aLaCarte","==",true).where("dispoWes","==",false).get().then((querySnapshot) => {
             var i =0;
